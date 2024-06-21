@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UPTOSKILLS</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Vng+6mD8Q79avA4cA5QWmONUmoqC97nRKErS00VWb7tmD5ddPcI+9VRjQfK6kZ90XXiPdZAmUB8ZfKSlp5R3Pw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <img src="images/uptoskills.jpg" alt="UPTOSKILLS Logo">
+    </div>
+    <div class="title">
+      <h2>UPTOSKILLS</h2>
+      <p>UPTOSKILLS QUIZ</p>
+    </div>
+  </div>
+  <div class="paper-row">
+    <p>UptoSkill Quizz</p>
+    <div>
+        <span><i class="fa fa-book"></i> Quistion Paper</span>
+        <span><i class="fa fa-board"></i> View instruction</span>
+    </div>
+</div>
+  <div class="candidateContainer">
+    <div class="candidate-left">
+        <div class="row">
+            <span>NTPC</span>
+        </div>
+        <div class="row">
+            <div class="navbar">
+                <div class="nav-title">UPTOSKILLS QUIZ</div>
+                <div class="timer" id="timer">Time Left: <span id="time">90:00</span></div>
+            </div>
+        </div>
+        <div class="row">
+            <span>NTPC</span>
+        </div>
+    </div>
+    <div class="candidate-right">
+        <div class="image" id="video-container"></div>
+            <video id="video-player" autoplay muted></video> <!-- Video element for displaying camera feed -->
+        </div>
+        <div class="name">
+            <h2>John Smith</h2>
+        </div>
+    </div>
+    
+    
+  </div>
+  
+
+  <div class="quiz-container">
+    <div class="container">
+        
+        <main>
+            <div id="quiz-section">
+                <div class="title-row">
+                    <span>Question Type: Multiple Type Question</span>
+                </div>
+                <div class="lang-row">
+                    <div class="lang">
+                        View in :<select name="" id="">
+                            <option value="English">English</option>
+                            <option value="Hindi">Hindi</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="question-container">
+                    <div id="quiz">
+                    <h2 id="question-number">Question No. 1</h2>
+                    <div id="question"></div>
+                    <div id="options"></div>
+                </div>
+                </div>
+                <div id="navigation-buttons">
+                    <!-- <button id="prev-btn" onclick="prevQuestion()">Previous</button> -->
+                    <button id="next-btn" onclick="nextQuestion()"><i class="fa fa-angle-right"></i></button>
+                </div>
+            </div>
+            <aside>
+                <div id="status-panel">
+                    <div> Answered: <span id="answered-count">0</span></div>
+                    <div>Not Answered: <span id="not-answered-count">20</span></div>
+                    <div>Not Visited: <span id="not-visited-count">20</span></div>
+                    <div>Marked for Review: <span id="marked-count">0</span></div>
+                    <div>Answerd & Marked for Review: <span id="marked-count">0</span></div>
+                </div>
+                <div id="question-nav">
+                    <h3>UPTOSKILL</h3>
+                    <div id="question-buttons">
+                        <!-- Question buttons will be added dynamically here -->
+                    </div>
+                </div>
+            </aside>
+        </main>
+        <footer>
+            <div>
+                <button id="mark-for-review-btn">Mark For Review & Next</button>
+                <button id="clear-response-btn">Clear Response</button>
+            </div>
+
+            <div>
+                <button onclick="prevQuestion()">Previous</button>
+                <button onclick="nextQuestion()">Save & Next</button>
+                <button  id="submit">Submit</button>
+            </div>
+
+            
+        </footer>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

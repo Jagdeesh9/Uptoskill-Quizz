@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>UPTOSKILLS</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="header">
+    <div class="logo">
+      <img src="images/uptoskills.jpg" alt="UPTOSKILLS Logo">
+    </div>
+    <div class="title">
+      <h2>UPTOSKILLS</h2>
+      <p>UPTOSKILLS QUIZ</p>
+    </div>
+  </div>
+  <div class="candidate-info">
+    <div class="system">
+      <div class="system-name">System Name : <span class="name">C001</span></div>
+      <div class="note">Kindly contact the invigilator if there are any discrepancies in the Name and Photograph
+        displayed on the screen or if the photograph is not yours</div>
+    </div>
+    <div class="candidate">
+      <div class="name">Himansu sekhar parida</div>
+      <div class="subject">Subject: <span class="name">uptoskills Mock Exam</span></div>
+    </div>
+    <div class="photo">
+      <img src="images/image.png" alt="Candidate Photo">
+    </div>
+  </div>
+  <div class="login-form">
+    <h2>Student login-form</h2>
+    <form id="loginForm">
+      <div class="icons">
+        <i class="fas fa-user"></i>
+        <input type="text" name="username" id="username" placeholder="Username" required />
+        <i class="fas fa-keyboard"></i>
+      </div>
+      <div class="icons">
+        <i class="fas fa-lock"></i>
+        <input type="password" name="password" id="password" placeholder="Password" required />
+        <i class="fas fa-keyboard"></i>
+      </div>
+      <button type="button" onclick="login()">Submit</button>
+    </form>
+  </div>
+</body>
+<script>
+  async function login() {
+    
+      let username = document.querySelector('#username').value;
+      let password = document.querySelector('#password').value;
+
+      console.log(username,password)
+
+      const url = 'http://localhost:8001/users/login';
+      const data = { username, password };
+
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+      }
+
+      const responseData = await response.json();
+      console.log('Success:', responseData);
+      alert('Login successful!');
+      window.location.href = 'QuizzPage.html'
+
+      return responseData;
+
+  }
+</script>
+
+</html>

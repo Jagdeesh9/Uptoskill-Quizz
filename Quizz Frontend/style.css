@@ -1,0 +1,552 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+  .header {
+    background-color: #fef8f8;
+    color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .logo img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .title {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .title h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .title p {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .candidate-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: burlywood;
+  }
+  
+  .system {
+    flex: 1;
+  }
+  
+  .system-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .note {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .candidate {
+    flex: 1;
+  }
+  
+  .candidate .name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .candidate .subject {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 20px;
+  }
+  
+  .photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  
+  .login-form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 350px;
+    margin: 20px auto;
+  }
+  
+  .login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .icons {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .icons i {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #777;
+  }
+  
+  .btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .btn:hover {
+    background-color: #45a049;
+  }
+  
+  .quiz-container {
+    /* width: 70%; */
+    /* margin: 20px auto; */
+    background-color: #f9f9f9;
+    padding: 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: flex;
+  }
+  .quiz-container>div:first-child{
+    flex-grow: 2;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #333; */
+    color:black;
+    /* padding: 10px; */
+    border-radius: 5px;
+  }
+  
+  /* .nav-title {
+    /* font-size: 24px; 
+  } */
+  
+  .timer {
+    font-size: 18px;
+  }
+  
+  .quiz-content {
+    margin-top: 20px;
+  }
+  
+  .question-container {
+    margin-bottom: 20px;
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .navigation button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .navigation button:hover {
+    background-color: #45a049;
+  }
+
+
+.candidateContainer{
+  /* padding: 5px; */
+  /* background-color: #4CAF50; */
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  border-bottom: 2px solid black;
+}
+.candidateContainer>div{
+  /* flex-grow: 1; */
+  border: 2px solid white;
+}
+.candidate-left{
+  flex-grow: 2;
+}
+.candidate-right{
+  display: flex;
+  gap: 20px;
+  padding-right: 20px;
+}
+.candidate-right>.image>img{
+  height: 135px;
+}
+
+.candidate-left>.row{
+  /* background-color: palevioletred; */
+  padding: 12px 10px;
+  border-bottom: 2px solid black;
+}
+.row:last-child{
+  border: none;
+}
+.row>span{
+  padding: 10px 30px;
+  background-color: greenyellow;
+  border-radius: 5px;
+}
+
+
+
+
+.container {
+  /* width: 90%; */
+  /* max-width: 1200px; */
+  /* padding: 0px 20px; */
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+
+main {
+  display: flex;
+  flex-grow: 1;
+}
+
+#quiz-section {
+  flex: 3;
+  /* padding: 20px; */
+  border-right: 1px solid #ddd;
+}
+
+#question-container {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#options div {
+  margin: 10px 0;
+}
+
+#navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+}
+
+aside {
+  flex: 1;
+  padding: 20px;
+  max-width: 250px;
+}
+
+#status-panel {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#status-panel>div{
+  max-width: 120px;
+  flex-grow: 1;
+  font-size: 12px;
+}
+
+#question-nav {
+  text-align: center;
+}
+
+#question-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 0 20px
+}
+#question-buttons>button{
+  background-color: rgb(143, 143, 143);
+  border-radius: 5px;
+}
+#question-buttons>button:hover{
+  background-color:#007bff;
+}
+#next-btn{
+  position: absolute;
+  top: -100px;
+  right: 0;
+}
+
+#question-buttons button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+#question-buttons button.active {
+  background-color: #0875ea;
+  color: white;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 10px 50px;
+  margin-top: 20px;
+  border-top: 1px solid black;
+}
+
+footer>div:first-child>button{
+  background-color: white;
+  border-radius: 2px;
+  border: 1px solid black;
+  color: black;
+}
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button[disabled] {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+
+.lang-row{
+  background-color: #0056b3;
+  color: white;
+
+}
+.lang-row>.lang{
+  transform: translateX(85%);
+}
+.lang-row,.title-row{
+  padding: 10px 20px;
+}
+
+#submit{
+  width: 150px;
+}
+
+.paper-row{
+  padding: 5px 20px;
+  display: inline;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+}
+
+
+
+#question-buttons button {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  border: none;
+}
+
+#question-buttons button.active {
+  background: brown;
+  clip-path: polygon(50% 0%, 100% 38%, 81% 100%, 19% 100%, 0% 38%);
+}
+
+#question-buttons button.visited-not-answered {
+  background: brown;
+  clip-path: polygon(50% 0%, 100% 38%, 81% 100%, 19% 100%, 0% 38%);
+}
+
+#question-buttons button.visited-answered {
+  background: green;
+  clip-path: polygon(50% 0%, 100% 38%, 81% 100%, 19% 100%, 0% 38%);
+}
+
+#question-buttons button.not-visited {
+  background: gray;
+  clip-path: none;
+  width: 50px;
+  height: 50px;
+}
+
+#question-buttons button:hover {
+  opacity: 0.8;
+}
+
+.button {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+}
+
+.pentagon {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  margin: 5px;
+  transform: rotate(36deg);
+  background-color: brown;
+}
+
+.pentagon:after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: -20px;
+  width: 100px;
+  height: 50px;
+  transform: rotate(72deg);
+  background-color: green;
+}
+
+
+
+.inverted {
+    transform: rotate(180deg);
+}
+
+.visited-not-answered {
+    background-color: brown;
+}
+
+.visited-answered {
+    background-color: green;
+}
+
+.visited-not-answered .pentagon {
+    background-color: brown;
+}
+
+.visited-answered .pentagon {
+    background-color: green;
+}
+
+.visited-not-answered .pentagon:after {
+    background-color: brown;
+}
+
+.visited-answered .pentagon:after {
+    background-color: green;
+}
+
+
+.marked-for-review {
+  background-color: yellow; 
+}
+
+/* video */
+.candidate-right {
+  display: flex; 
+  align-items: center; 
+}
+
+.image {
+  width: 50px; 
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0; 
+  border-radius: 50%; 
+}
+
+.image i {
+  font-size: 24px; 
+  color: #333;
+}
+
+.name {
+  margin-left: 10px; 
+}
+
+/* camera */
+.candidate-right {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  width: 200px; 
+  height: 150px; 
+  overflow: hidden; 
+  position: relative; 
+}
+
+.image video {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.name {
+  margin-left: 10px; 
+}
+
+button {
+  margin-top: 10px;
+}
+
+
+#video-container {
+  position: relative;
+  width: 100%; 
+  height: auto; 
+}
+
+#video-player {
+  width: 30%;
+  height: auto;
+  border-radius: 50%;
+}
